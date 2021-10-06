@@ -1,8 +1,7 @@
 import "./App.css";
 import { useState } from "react";
-
-import CardProducts from "./conponents/CardProducts";
 import CardRegister from "./conponents/CardRegister";
+import Dashboard from "./dashboard";
 import CardMoves from "./conponents/cardMoves";
 
 function App() {
@@ -16,16 +15,16 @@ function App() {
     <div className="App">
       <div className="App-header">
         <div>
-          <CardMoves transactions={transactions}/>
-        </div>
-        <div>
-          <CardProducts transactions={transactions} />
+          <Dashboard transactions={transactions} />
         </div>
         <div>
           <CardRegister
             transactions={transactions}
             setTransactions={setTransactions}
           />
+        </div>
+        <div>
+          <CardMoves transactions={transactions}/>
         </div>
       </div>
     </div>
